@@ -2,53 +2,29 @@
 
   <div class="usa-footer-primary-section">
     <div class="usa-grid-full">
-      <nav class="usa-footer-nav usa-width-two-thirds">
-      <ul class="usa-unstyled-list">
-        <li class="usa-width-one-sixth usa-footer-primary-content">
-        <%= link_to 'About',
-          page_path('about'),
-          class: 'usa-footer-primary-link' %>
-        </li>
-        <li class="usa-width-one-sixth usa-footer-primary-content">
-        <%= link_to 'Policies',
-          page_path('policies'),
-          class: 'usa-footer-primary-link' %>
-        </li>
-        <li class="usa-width-one-sixth usa-footer-primary-content">
-        <%= link_to 'Docs',
-          page_path('docs'),
-          class: 'usa-footer-primary-link' %>
-        </li>
-        <li class="usa-width-one-sixth usa-footer-primary-content">
-        <%= link_to 'Insights',
-          insights_path,
-          class: 'usa-footer-primary-link' %>
-        </li>
-        <li class="usa-width-one-sixth usa-footer-primary-content">
-        <%= link_to 'API',
-          api_doc_path,
-          class: 'usa-footer-primary-link' %>
-        </li>
-      </ul>
-      </nav>
-      <div class="usa-width-one-third">
-        <div class="usa-footer-primary-content usa-footer-contact_info">
-          <a href="https://github.com/18F/micropurchase/">
-            <i class="fa fa-github"></i> View on GitHub
-          </a>
-        </div>
-        <div class="usa-footer-primary-content usa-footer-contact_info">
-          <%= mail_to 'micropurchase@gsa.gov' %>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="usa-footer-secondary_section">
-    <div class="usa-grid">
-      <div class="usa-footer-logo">
-        <%= image_tag "18F-Logo-2016-Blue.svg", class: 'usa-footer-slim-logo-img logo-img', alt: 'Logo image' %>
-        <div class="usa-footer-slim-logo-heading">Micro-purchase</div>
+      <div class="nyc-footer">
+        <span class="left">
+         <a href="http://www1.nyc.gov/nyc-resources/agencies.page">Directory of City Agencies</a>
+          <a href="http://www1.nyc.gov/home/contact-us.page">Contact NYC Government</a>
+          <a href="https://a127-ess.nyc.gov">City Employees</a>
+          <a href="http://www.nyc.gov/notifynyc">Notify NYC</a>
+          <a href="http://a856-citystore.nyc.gov/">CityStore</a>
+          <a href="http://www1.nyc.gov/connect/social-media.page">Stay Connected</a>
+          <a href="http://www1.nyc.gov/connect/applications.page">NYC Mobile Apps</a>
+          <a href="http://www1.nyc.gov/nyc-resources/nyc-maps.page">Maps</a>
+          <a href="http://www1.nyc.gov/nyc-resources/resident-toolkit.page">Resident Toolkit</a>
+        </span>
+        <span class="right">
+          <span class="logo-nyc">NYC</span>
+          <form class="form-search" method="get" action="http://www1.nyc.gov/home/search/index.page">
+          <input placeholder="Search" class="input-search placeholder" name="search-terms" type="text"/>
+          <input name=_csrf_token type=hidden value="a5ee80e5-7a76-4547-8ab1-2e06a93c50a3">
+          <button class="ico-search">Search</button>
+          </form>
+          <p>City of New York. 2015 All Rights Reserved,</p>
+          <p>NYC is a trademark and service mark of the City of New York</p>
+          <p><a href="#">Privacy Policy</a>. <a href="#">Terms of Use</a>.</p>
+        </span>
       </div>
     </div>
   </div>

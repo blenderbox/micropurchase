@@ -11,10 +11,21 @@
   }
 }
 
+.topnav {
+  border-bottom: 1px solid #000;
+  padding-bottom: 15px;
+}
+
+.logo {
+  float: left;
+  margin-top: 32px;
+  width: 208px;
+}
+
 .title {
-  background-image: image-url('18F-Logo-2016-Blue.svg');
+  background-image: image-url('openbid-logo.png');
   background-repeat: no-repeat;
-  color: $color-white;
+  color: $color-gray;
   float: left;
   font-size: 24px;
   font-weight: $font-light;
@@ -36,7 +47,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   list-style: none;
-  margin-top: 3.5rem;
+  margin-top: 63px;
 
   @include media($medium-screen) {
     flex-direction: row;
@@ -57,14 +68,14 @@
   font-size: 16px;
   margin-left: 1.5rem;
   padding-bottom: .5rem;
-  color: $color-white;
+  color: $color-gray;
 
   @include media($medium-screen) {
     padding-bottom: 0;
   }
 
   a {
-    color: $color-white;
+    color: $color-gray;
     font-weight: 500;
   }
 }

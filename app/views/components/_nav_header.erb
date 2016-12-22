@@ -1,13 +1,10 @@
-<%= render partial: 'components/disclaimer' %>
+<%= render partial: 'components/agency_header' %>
 
 <header class="header">
-<div class="usa-grid">
+<div class="usa-grid topnav">
   <div class="usa-grid-one-half icon">
     <%= link_to root_path do %>
-      <div class="title">
-        <%= title ||= 'Micro-purchase' %> <span class="usa-label label-beta">Beta</span>
-        <div class="subtitle">A marketplace for open source work</div>
-      </div>
+       <img class="logo" src="/assets/openbid-logo.png" alt=""/>
     <% end %>
   </div>
 
