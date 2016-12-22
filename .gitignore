@@ -18,6 +18,7 @@
 /public/capybara.html
 /public/commit.txt
 .env
+.env.development
 .foreman
 
 cf-ssh.yml
