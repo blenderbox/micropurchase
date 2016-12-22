@@ -78,6 +78,11 @@
     color: $color-gray;
     font-weight: 500;
   }
+  
+  a:hover {
+    color: $color-dark-gray;
+    text-decoration: none;
+  }
 }
 
 .sign-in a {
