@@ -1,5 +1,5 @@
 class AuctionThreshold
-  MICROPURCHASE = 3500
+  MICROPURCHASE = 20000
   SAT = 200000
 
   def initialize(auction)
