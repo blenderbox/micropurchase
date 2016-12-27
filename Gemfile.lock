@@ -201,6 +201,7 @@ GEM
       actionmailer (>= 3.2)
       letter_opener (~> 1.0)
       railties (>= 3.2)
+    libv8 (3.16.14.17)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
@@ -295,6 +296,7 @@ GEM
     rainbow (2.1.0)
     rake (11.2.2)
     redcarpet (3.3.4)
+    ref (2.0.0)
     rest-client (2.0.0)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
@@ -365,6 +367,9 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     terminal-table (1.6.0)
+    therubyracer (0.12.2)
+      libv8 (~> 3.16.14.0)
+      ref
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.5)
@@ -419,6 +424,7 @@ DEPENDENCIES
   dotenv
   dotenv-rails
   email_validator
+  execjs
   factory_girl_rails
   faker
   foreman
@@ -456,6 +462,7 @@ DEPENDENCIES
   shoulda-matchers
   simple_form
   sinatra
+  therubyracer
   timecop
   uglifier
   uswds-rails!
@@ -464,7 +471,7 @@ DEPENDENCIES
   webmock
 
 RUBY VERSION
-   ruby 2.3.3p222
+   ruby 2.3.1p112
 
 BUNDLED WITH
    1.13.6

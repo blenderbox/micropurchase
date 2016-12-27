@@ -3,6 +3,7 @@ en:
     attributes:
       user:
         duns_number: "DUNS number"
+        fms_number: "FMS number"
       auction:
         start_price: ""
     errors:
