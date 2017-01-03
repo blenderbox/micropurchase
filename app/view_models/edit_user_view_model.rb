@@ -15,6 +15,18 @@ class EditUserViewModel
     sam_status_presenter.status_text
   end
 
+  def fms_status_icon_class
+    "#{fms_status_class}-verification-status-icon"
+  end
+
+  def fms_status_text_class
+    "#{fms_status_class}-verification-status-text"
+  end
+
+  def fms_status_text
+    fms_status_presenter.status_text
+  end
+
   def record
     user
   end
@@ -25,6 +37,10 @@ class EditUserViewModel
 
   def sam_status_message_for(flash)
     @user.decorate.sam_status_message_for(flash)
+  end
+
+  def fms_status_message_for(flash)
+    @user.decorate.fms_status_message_for(flash)
   end
 
   private
@@ -38,4 +54,13 @@ class EditUserViewModel
   def sam_status_presenter
     SamStatusPresenterFactory.new(user).create
   end
+
+  def fms_status_class
+    fms_status_presenter.status_class
+  end
+
+  def fms_status_presenter
+    FmsStatusPresenterFactory.new(user).create
+  end
+
 end

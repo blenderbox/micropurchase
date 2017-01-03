@@ -7,8 +7,10 @@ class User < ActiveRecord::Base
   validates :github_id, presence: true
   validates :github_login, presence: true
   validates :sam_status, presence: true
+  validates :fms_status, presence: true
 
   enum sam_status: { duns_blank: 0, sam_accepted: 1, sam_rejected: 2, sam_pending: 3 }
+  enum fms_status: { fms_blank: 0, fms_accepted: 1, fms_rejected: 2, fms_pending: 3 }
 
   def decorate
     if Admins.verify?(github_id)

@@ -5,6 +5,7 @@ class UpdateUser < Struct.new(:params, :current_user)
     update_user
     update_auctions
     update_sam
+    update_fms
     user.save
   end
 
@@ -25,6 +26,12 @@ class UpdateUser < Struct.new(:params, :current_user)
   def update_sam
     reckoner = SamAccountReckoner.new(user)
     reckoner.set_default_sam_status
+    reckoner.delay.set!
+  end
+
+  def update_fms
+    reckoner = FmsAccountReckoner.new(user)
+    reckoner.set_default_fms_status
     reckoner.delay.set!
   end
 
@@ -63,6 +70,6 @@ class UpdateUser < Struct.new(:params, :current_user)
   def user_params
     params
       .require(:user)
-      .permit(:name, :duns_number, :email, :payment_url)
+      .permit(:name, :duns_number, :fms_number, :email, :payment_url)
   end
 end

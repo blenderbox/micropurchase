@@ -26,6 +26,12 @@
           <%= @view_model.sam_status_text %>
         </span>
 
+        <%= f.input :fms_number %>
+          <span class=<%= @view_model.fms_status_icon_class %>></span>
+          <span class=<%= @view_model.fms_status_text_class%>>
+          <%= @view_model.fms_status_text %>
+        </span>
+
         <h3>Getting paid</h3>
         <p>
           Before we can pay you, we'll need a location we can visit to issue

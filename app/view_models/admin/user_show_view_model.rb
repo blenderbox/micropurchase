@@ -9,7 +9,7 @@ class Admin::UserShowViewModel < Admin::BaseViewModel
     [
       { label: 'Email', data: user.email },
       { label: 'Payment URL', data: user.payment_url },
-      { label: 'dDUNS number', data: user.duns_number },
+      { label: 'DUNS number', data: user.duns_number },
       { label: 'GitHub username', data: user.github_login },
       { label: 'GitHub ID', data: user.github_id },
       { label: 'SAM', data: sam_status },
@@ -44,6 +44,10 @@ class Admin::UserShowViewModel < Admin::BaseViewModel
 
   def sam_status
     SamStatusPresenterFactory.new(user).create.admin_status_text
+  end
+
+  def fms_status
+    FmsStatusPresenterFactory.new(user).create.admin_status_text
   end
 
   def small_business

@@ -6,4 +6,9 @@ class AdminUserPresenter < UserPresenter
   def sam_status_message_for(_flash)
     nil
   end
+
+  def fms_status_message_for(_flash)
+    nil
+  end
+
 end

@@ -11,6 +11,14 @@ class UserPresenter < SimpleDelegator
     sam_status_presenter.flash_message(flash)
   end
 
+  def admin_fms_status
+    fms_status_presenter.admin_status_text
+  end
+
+  def fms_status_message_for(flash)
+    fms_status_presenter.flash_message(flash)
+  end
+
   def nav_drawer_partial
     "components/user_nav_drawer"
   end
@@ -47,6 +55,10 @@ class UserPresenter < SimpleDelegator
     in_sam? ? 'Yes' : 'No'
   end
 
+  def fms_status_label
+    in_fms? ? 'Yes' : 'No'
+  end
+
   def small_business_label
     if in_sam?
       small_business? ? 'Yes' : 'No'
@@ -65,7 +77,16 @@ class UserPresenter < SimpleDelegator
     model.sam_accepted?
   end
 
+  def in_fms?
+    model.fms_accepted?
+  end
+
   def sam_status_presenter
     SamStatusPresenterFactory.new(model).create
   end
+
+  def fms_status_presenter
+    FmsStatusPresenterFactory.new(model).create
+  end
+
 end

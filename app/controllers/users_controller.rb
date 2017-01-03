@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   def edit
     @view_model = EditUserViewModel.new(current_user)
     @view_model.sam_status_message_for(flash)
+    @view_model.fms_status_message_for(flash)
   end
 
   def update
