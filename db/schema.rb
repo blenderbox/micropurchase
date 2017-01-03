@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160921135321) do
+ActiveRecord::Schema.define(version: 20170103181509) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -135,9 +135,12 @@ ActiveRecord::Schema.define(version: 20160921135321) do
     t.integer  "sam_status",          default: 0,     null: false
     t.boolean  "contracting_officer", default: false, null: false
     t.boolean  "small_business",      default: false, null: false
+    t.string   "fms_number",          default: "",    null: false
+    t.integer  "fms_status",          default: 0,     null: false
   end
 
   add_index "users", ["contracting_officer"], name: "index_users_on_contracting_officer", where: "(contracting_officer = true)", using: :btree
+  add_index "users", ["fms_status"], name: "index_users_on_fms_status", using: :btree
   add_index "users", ["sam_status"], name: "index_users_on_sam_status", using: :btree
 
 end
