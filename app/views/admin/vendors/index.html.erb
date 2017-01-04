@@ -6,9 +6,9 @@
       <tr>
         <th scope="col">Name</th>
         <th scope="col">Email address</th>
-        <th scope="col">DUNS #</th>
-        <th scope="col">Small business</th>
-        <th scope="col">SAM status</th>
+        <th scope="col">FMS #</th>
+        <th scope="col">M/WBE</th>
+        <th scope="col">FMS status</th>
         <th scope="col"></th>
       </tr>
     </thead>
@@ -17,9 +17,9 @@
         <tr>
           <td><%= link_to user.name, admin_user_path(user.id) %></td>
           <td><%= user.email %></td>
-          <td><%= user.duns_number %></td>
-          <td><%= user.small_business_label %></td>
-          <td><%= user.admin_sam_status %></td>
+          <td><%= user.fms_number %></td>
+          <td><%= user.is_mwbe %></td>
+          <td><%= user.admin_fms_status %></td>
           <td><%= render partial: user.masquerade_partial, locals: { user: user } %></td>
         </tr>
       <% end %>

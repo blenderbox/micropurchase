@@ -1,8 +1,8 @@
 <div class="usa-grid">
   <h1>Policies</h1>
 
-  <p class="usa-font-lead">This document provides an overview of how 18F
-  Micro-purchase works and a set of rules to which our administrators will refer
+  <p class="usa-font-lead">This document provides an overview of how OpenBid
+  auction works and a set of rules to which our administrators will refer
   while running auctions.</p>
 
   <h2 id="how-auctions-work">How auctions work</h2>
@@ -10,7 +10,7 @@
 
   <ol>
     <li><strong>Pre-bidding period ("coming soon"):</strong> Auctions are posted
-    to the Micro-purchase Platform (and announced via our newsletter and Twitter
+    to the auction Platform (and announced via our newsletter and Twitter
     accounts) before bidding begins. This gives prospective vendors time to
     estimate the effort that it might take to meet their acceptance criteria.
     </li>
@@ -26,12 +26,12 @@
       href="https://guides.github.com/features/issues/#notifications">referencing</a>
     the issue associated with the auction, and clicking the "Start work" button
     on the auction's page. At that point the conversation moves to the pull
-    request itself, wherein the winning vendor can update 18F and our customer
+    request itself, wherein the winning vendor can update OpenBid and our customer
     on their work in progress, ask questions, etc. Once the vendor believes
     their pull request meets the auction's acceptance criteria, they'll return
     to the auction page and indicate that they've finished their work by
     clicking the "I'm done" button.</li>
-    <li><strong>Acceptance period:</strong> 18F works with our customer to
+    <li><strong>Acceptance period:</strong> OpenBid works with our customer to
     evaluate the winning vendor's code against the auction's acceptance
     criteria. If the code meets the criteria, it's accepted. Otherwise, it's
     rejected.</li>
@@ -46,20 +46,20 @@
 
   <h2 id="code-of-conduct">Code of conduct</h2>
 
-  <p>Users of 18F's Micro-purchase Platform agree to abide by the <a
-    href="https://github.com/18F/code-of-conduct/blob/master/code-of-conduct.md">18F
+  <p>Users of OpenBid's auction Platform agree to abide by the <a
+    href="https://github.com/18F/code-of-conduct/blob/master/code-of-conduct.md">OpenBid
     Code of Conduct</a>.</p>
 
   <h2 id="transparency-policy">Transparency policy</h2>
 
-  <p>18F will publish, on a publicly available website
-  (https://micropurchase.18f.gov), data associated with each auction (including
+  <p>OpenBid will publish, on a publicly available website
+  (https://micropurchase.OpenBid.gov), data associated with each auction (including
   the auction description, acceptance criteria, amendments, etc.) and other
   relevant information that is neither confidential or proprietary in nature nor
   source-selection sensitive information that would otherwise implicate
   procurement integrity concerns. </p>
 
-  <p>Auctions on 18F Micro-purchase are run according to a set of rules, either
+  <p>Auctions on NYC OpenBid are run according to a set of rules, either
   as a sealed-bid auction or a (standard) reverse-auction. If an auction is run
   as a <strong>sealed-bid auction,</strong> the total number of bids, the
   identity of any vendor who places a bid, and the dollar amount of each bid
@@ -72,26 +72,26 @@
   information public enables vendors to know if they are the low bidder and if
   they've been outbid.</p>
 
-  <p>Once a winner is chosen, 18F will publish the final bid of each auction and
+  <p>Once a winner is chosen, OpenBid will publish the final bid of each auction and
   specific source-identifying data; for example, the quantity and amount of any
   bids placed, the names of vendors who've placed bids, etc. During the delivery
-  period of each auction, 18F will collaborate with vendors in a publicly
+  period of each auction, OpenBid will collaborate with vendors in a publicly
   visible GitHub issue and/or pull request, sharing any data related to project
   management (for example, user stories, milestones, test scores, and
   performance metrics).</p>
 
   <h2 id="premature-closing">Premature closing</h2>
 
-  <p>18F reserves the right to delete an auction, prohibit bidding, and forego
+  <p>OpenBid reserves the right to delete an auction, prohibit bidding, and forego
   delivery at any point in the pre-bidding, bidding, delivery, and acceptance
-  processes outlined above. 18F will not issue payment to a vendor until that
+  processes outlined above. OpenBid will not issue payment to a vendor until that
   vendor's code has been deemed acceptable (see "Delivery and acceptance
   policy," below) and their pull request has been merged.</p>
 
   <h2 id="eligibility-to-bid">Eligibility to bid</h2>
 
   <p>Vendors must have a GitHub account to register and sign into the
-  Micro-purchase Platform. In order to <%= link_to 'place a bid',
+  auction Platform. In order to <%= link_to 'place a bid',
     page_path('docs/placing_a_bid') %>, vendors must obtain a DUNS number and
     register in SAM.gov. Finally, auctions with a starting bid greater than
     $3,500 are limited to those vendors whose SAM.gov profile indicates that
@@ -99,7 +99,7 @@
 
   <h2 id="source-selection-method">Source-selection method</h2>
 
-  <p>18F Micro-purchase uses reverse-auctions to determine the source for any
+  <p>NYC OpenBid uses reverse-auctions to determine the source for any
   given procurement. Eligible vendors can place bids on an auction during its
   bidding period. Once that period ends, the vendor with the lowest bid is
   deemed the winner. In the event of a tie, the <em>first</em> vendor to place
@@ -107,22 +107,22 @@
 
   <p>In the event that a winner is either (a) unable to deliver on an auction by
   the delivery deadline assigned to them or (b) delivers code that is deemed
-  unacceptable, 18F reserves the right to reject the auction, choose a new
-  winner, or re-run the auction. If 18F chooses a new winner for an auction,
+  unacceptable, OpenBid reserves the right to reject the auction, choose a new
+  winner, or re-run the auction. If OpenBid chooses a new winner for an auction,
   that winner will be either a vendor that tied with the original winner (but
   who placed their bid just after the original winner) or the next-highest
   bidder — with preference given to the former.</p>
 
   <h2 id="bid-acknowledgement-and-communication">Bid acknowledgement and communication</h2>
 
-  <p>18F will contact the winning bidder within 24 hours of the end of the
+  <p>OpenBid will contact the winning bidder within 24 hours of the end of the
   auction. We require a timely response to acknowledge and confirm the bid
   amount. The code requested in the auction will be due as explained in the
   acceptance criteria of each specific auction.</p>
 
   <h2 id="delivery-and-acceptance-policy">Delivery and acceptance policy</h2>
 
-  <p>18F gives every auction a <strong>delivery period;</strong> that is, a
+  <p>OpenBid gives every auction a <strong>delivery period;</strong> that is, a
   rough estimate of how long we think it'll take vendors to complete the work.
   The default delivery period is five business days.</p>
 
@@ -137,7 +137,7 @@
   We encourage winning vendors to submit their work, even if it's incomplete,
   and ask questions early and often.</p>
 
-  <p>In some cases, 18F may, at its discretion, agree to an extension of the
+  <p>In some cases, OpenBid may, at its discretion, agree to an extension of the
   delivery period, known as a "cure period." During the cure period, vendors are
   required to fix any bugs or otherwise refine their pull request so that it can
   be accepted and merged. The length of the cure period will vary depending on
@@ -152,9 +152,9 @@
   card payment are the responsibility of the winning vendor (that is, they will
   come out of the award).</p>
 
-  <h2 id="micro-purchase-platform-fee">Micro-purchase (platform) fee</h2>
+  <h2 id="micro-purchase-platform-fee">auction (platform) fee</h2>
 
-  <p>18F charges its customers a platform fee of $1,000 per auction to help
+  <p>OpenBid charges its customers a platform fee of $1,000 per auction to help
   cover our operational expenses. This fee is assessed whenever an auction is
   successfully completed; that is, whenever a vendor's work is accepted.</p>
 
@@ -163,6 +163,6 @@
   these instances, our team will likely work to collaboratively revise our
   customer's acceptance criteria and relist their auction.</p>
 
-  <p>At this time, 18F waives the platform fee for any office within GSA's
+  <p>At this time, OpenBid waives the platform fee for any office within GSA's
   Technology Transformation Service (TTS).</p>
 </div>

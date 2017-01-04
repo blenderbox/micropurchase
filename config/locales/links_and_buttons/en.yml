@@ -14,6 +14,6 @@ en:
       add: 'Add skill'
     users:
       download_csv: 'Download CSV'
-      masquerade: 'Masquerade'
+      masquerade: 'View As'
     header:
       stop_masquerading: 'Stop masquerading'

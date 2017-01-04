@@ -16,15 +16,19 @@
 
         <h3>Placing a bid</h3>
         <p>
-          Before you can bid on an auction, you’ll need to register on SAM.gov, request a
-          DUNS number, and link your SAM.gov profile with your DUNS number. See
+          Before you can bid on an auction, you’ll need a valid FMS Vendor Number from the City of New York. If you're not sure
+          what your FMS Vendor Number is, you can look it up on the city's <a target="_blank" href="https://a127-pip.nyc.gov/webapp/PRDPCW/SelfService">Payee Information Portal (PIP)</a>. See
           <%= link_to 'our guide for more information', page_path('docs/placing_a_bid') %>.
         </p>
-        <%= f.input :duns_number %>
-        <span class=<%= @view_model.sam_status_icon_class %>></span>
-        <span class=<%= @view_model.sam_status_text_class%>>
-          <%= @view_model.sam_status_text %>
-        </span>
+
+        <%-# commenting this block out for now, OpenBid is using FMS Number not DUNS from SAM.GOV -%>
+        <% if false %>
+          <%= f.input :duns_number %>
+          <span class=<%= @view_model.sam_status_icon_class %>></span>
+          <span class=<%= @view_model.sam_status_text_class%>>
+            <%= @view_model.sam_status_text %>
+          </span>
+        <% end %>
 
         <%= f.input :fms_number %>
           <span class=<%= @view_model.fms_status_icon_class %>></span>
@@ -32,15 +36,19 @@
           <%= @view_model.fms_status_text %>
         </span>
 
-        <h3>Getting paid</h3>
-        <p>
-          Before we can pay you, we'll need a location we can visit to issue
-          payment. If you're unfamiliar with processing payments online, see
-          <%= link_to 'our guide for more information', page_path('docs/getting_paid') %>.
-        </p>
-        <%= f.input :payment_url %>
+        <%-# commenting this block out for now, OpenBid is not using payment info -%>
+        <% if false %>
+          <h3>Getting paid</h3>
+          <p>
+            Before we can pay you, we'll need a location we can visit to issue
+            payment. If you're unfamiliar with processing payments online, see
+            <%= link_to 'our guide for more information', page_path('docs/getting_paid') %>.
+          </p>
+          <%= f.input :payment_url %>
+        <% end %>
 
-        <%= f.submit class: 'usa-button usa-button-outline' %>
+
+          <%= f.submit class: 'usa-button usa-button-outline' %>
       <% end %>
     </div>
   </div>
