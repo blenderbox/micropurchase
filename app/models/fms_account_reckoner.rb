@@ -59,8 +59,13 @@ class FmsAccountReckoner < Struct.new(:user)
     spending_response = Net::HTTP.new(uri.host, uri.port).start { |http| http.request spending_request }
 
     spending_record_count = Hash.from_xml(spending_response.body)["response"]["result_records"]["record_count"]
-    spending_vendor_name = Hash.from_xml(spending_response.body)["response"]["result_records"]["spending_transactions"]["transaction"]["payee_name"]
-    spending_mwbe_category = Hash.from_xml(spending_response.body)["response"]["result_records"]["spending_transactions"]["transaction"]["mwbe_category"]
+
+    if spending_record_count.to_f > 0
+      spending_vendor_name = Hash.from_xml(spending_response.body)["response"]["result_records"]["spending_transactions"]["transaction"]["payee_name"]
+      spending_mwbe_category = Hash.from_xml(spending_response.body)["response"]["result_records"]["spending_transactions"]["transaction"]["mwbe_category"]
+    else
+      spending_mwbe_category = ''
+    end
 
     # Now Check the Contracts API
     contracts_request_string = '<request><type_of_data>Contracts</type_of_data><records_from>1</records_from><max_records>1</max_records><search_criteria><criteria><name>status</name><type>value</type><value>registered</value></criteria><criteria><name>category</name><type>value</type><value>all</value></criteria><criteria><name>vendor_code</name><type>value</type><value><fms_number/></value></criteria></search_criteria><response_columns><column>vendor</column><column>mwbe_category</column></response_columns></request>'
@@ -71,8 +76,13 @@ class FmsAccountReckoner < Struct.new(:user)
     contracts_response = Net::HTTP.new(uri.host, uri.port).start { |http| http.request contracts_request }
 
     contracts_record_count = Hash.from_xml(contracts_response.body)["response"]["result_records"]["record_count"]
-    contracts_vendor_name = Hash.from_xml(contracts_response.body)["response"]["result_records"]["contract_transactions"]["transaction"]["vendor"]
-    contracts_mwbe_category = Hash.from_xml(contracts_response.body)["response"]["result_records"]["contract_transactions"]["transaction"]["mwbe_category"]
+
+    if contracts_record_count.to_f > 0
+      contracts_vendor_name = Hash.from_xml(contracts_response.body)["response"]["result_records"]["contract_transactions"]["transaction"]["vendor"]
+      contracts_mwbe_category = Hash.from_xml(contracts_response.body)["response"]["result_records"]["contract_transactions"]["transaction"]["mwbe_category"]
+    else
+      contracts_mwbe_category = ''
+    end
 
     checkbook_result = {:in_fms=>false, :mwbe=>false}
 
