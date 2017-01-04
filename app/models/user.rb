@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
 
   validates :payment_url, url: { allow_blank: true, no_local: true, schemes: %w(http https) }
   validates :duns_number, duns_number: true
+  validates :fms_number, fms_number: true
   validates :email, presence: true, email: true
   validates :github_id, presence: true
   validates :github_login, presence: true
