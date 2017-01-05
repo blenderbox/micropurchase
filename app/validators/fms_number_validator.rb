@@ -17,7 +17,7 @@ class FmsNumberValidator < ActiveModel::EachValidator
 
   def contains_ten_integers?(fms_number)
     if fms_number.present?
-      fms_number.match(/\A\d{10}\z/)
+      fms_number.match(\A(?i)[0-9V][0-9SC]\d{8}\z)
     end
   end
 end
