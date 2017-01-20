@@ -34,7 +34,7 @@ class Auction < ActiveRecord::Base
 
   enum published: { unpublished: 0, published: 1, archived: 2 }
   enum purchase_card: { default: 0, other: 1 }
-  enum type: { sealed_bid: 0, reverse: 1 }
+  enum type: { sealed_bid: 0, reverse: 1, open_call: 3 }
 
   # Disable STI
   self.inheritance_column = :__disabled

@@ -1,10 +1,18 @@
 class BiddingStatusPresenter::Available < BiddingStatusPresenter::Base
   def start_label
-    I18n.t('bidding_status.available.start_label')
+    if auction.type == 'open_call'
+      "Post Start Time"
+    elsif
+      "Bid Start Time"
+    end
   end
 
   def deadline_label
-    I18n.t('bidding_status.available.deadline_label')
+    if auction.type == 'open_call'
+      "Post End Date"
+    elsif
+      "Bid deadline"
+    end
   end
 
   def relative_time
@@ -29,6 +37,8 @@ class BiddingStatusPresenter::Available < BiddingStatusPresenter::Base
     elsif auction.type == 'sealed_bid'
       I18n.t('bidding_status.available.bid_label.sealed_bid',
              amount: amount)
+    elsif auction.type == 'open_call'
+      "You registered interest in this Open Call"
     elsif auction.type == 'reverse' && bid.bidder == user
       I18n.t('bidding_status.available.bid_label.reverse.vendor_winning',
              amount: amount)

@@ -1,4 +1,4 @@
-<% content_for :title do %>18F Micro-purchase - <%= @view_model.title %><% end %>
+<% content_for :title do %>NYC Openbid- <%= @view_model.title %><% end %>
 <% content_for :description do %><%= @view_model.summary %><% end %>
 <% content_for :data_tags do %>
   <%= render partial: '/auctions/data_tags', locals: { auction: @view_model } %>
@@ -37,7 +37,11 @@
   <div class="usa-grid">
     <div class="usa-width-two-thirds">
       <%= render partial: 'auctions/auction', locals: { auction: @view_model } %>
-      <%= render partial: 'auctions/bids', locals: { auction_bids: @view_model } %>
+      <% if @view_model.auction.type == "open_call"%>
+          <%= render partial: '/auctions/inquiries', locals: { auction_bids: @view_model } %>
+      <% else %>
+          <%= render partial: '/auctions/bids', locals: { auction_bids: @view_model } %>
+      <% end %>
     </div>
 
     <div class="usa-width-one-third">
@@ -58,10 +62,10 @@
           <%= render partial: @view_model.paid_at_partial, locals: { auction: @view_model } %>
           <%= render partial: @view_model.accepted_at_partial, locals: { auction: @view_model } %>
           <p>
-          <i class="fa fa-github"></i>
+          <!--<i class="fa fa-github"></i>
           <%= link_to 'View on GitHub <icon class="fa fa-angle-double-right"></icon>'.html_safe,
             @view_model.issue_url,
-            target: '_blank' %>
+            target: '_blank' %>-->
           </p>
         </div>
       </div>

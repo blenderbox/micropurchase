@@ -16,7 +16,6 @@ class FmsStatusPresenter::Pending < FmsStatusPresenter::Base
   end
 
   def message
-    "Your profile is pending while your FMS number is being validated. This
-    typically takes less than one hour"
+    "You may continue to bid while your FMS number is being verified. (It usually takes less than one hour)."
   end
 end

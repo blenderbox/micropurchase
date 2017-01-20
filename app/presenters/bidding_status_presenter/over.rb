@@ -22,9 +22,14 @@ class BiddingStatusPresenter::Over < BiddingStatusPresenter::Base
 
   def bid_label(_user)
     if bids?
-      I18n.t('bidding_status.over.bid_label',
-             winner_name: winner_name,
-             amount: winning_bid_amount_as_currency)
+      if auction.type == 'open_call'
+      I18n.t('bidding_status.over.open_call_bid_label',
+             total_inquiries: auction.bids.count)
+      else
+        I18n.t('bidding_status.over.bid_label',
+               winner_name: winner_name,
+               amount: winning_bid_amount_as_currency)
+      end
     else
       ''
     end

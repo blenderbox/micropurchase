@@ -15,18 +15,25 @@ en:
             There are %{total_bids} bids on this auction, and
             %{winner_url} is currently winning. This auction is
             accepting bids until %{end_date}.
+          open_call_header: Accepting Inquiries
+          open_call_body: This Open Call is accepting inquiries until %{end_date}.
+          open_call_has_inquiries: >
+            There are %{total_bids} inquiries on this open call. This Open Call is accepting inquiries until %{end_date}.
         guest:
           body: >
             This auction is accepting bids until %{end_date}. %{sign_in_link} or
             %{sign_up_link} with GitHub to bid.
+          open_call_body: >
+            This Open Call is accepting inquiries until %{end_date}. %{sign_in_link} or
+            %{sign_up_link} with GitHub to register your interest.
         vendor:
           eligible:
             body: "The maximum you can bid is %{max_allowed_bid_as_currency}."
           not_verified:
             header: Please update your profile
             body: >
-              Your profile must contain a valid DUNS number before you can place a bid. Please
-              <a href="/profile">update your profile</a>.
+              Your profile must contain a valid FMS number before you can place a bid. Please
+              <a href="/account/profile">update your profile</a>.
           not_small_business:
             header: You are ineligible to bid
             body: >
@@ -36,6 +43,9 @@ en:
           reverse_auction_outbid:
             header: "Place bid"
             body: "You've been outbid! The maximum you can bid is %{max_allowed_bid_as_currency}."
+          open_call_auction_bidder:
+            header: 'Interest Recorded'
+            body: You registered your interest on %{bid_date}.
           sealed_auction_bidder:
             header: 'Bid placed'
             body: You placed a bid of %{bid_amount} on %{bid_date}.

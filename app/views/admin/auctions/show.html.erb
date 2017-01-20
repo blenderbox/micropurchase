@@ -23,7 +23,6 @@
           </div>
         </div>
       </div>
-
       <%= render partial: 'auctions/subnav' %>
     </div>
   </div>
@@ -31,7 +30,11 @@
   <div class="usa-grid">
     <div class="usa-width-two-thirds">
       <%= render partial: 'admin/auctions/auction', locals: { auction: @view_model } %>
-      <%= render partial: 'admin/auctions/bids', locals: { auction_bids: @view_model } %>
+      <% if @view_model.auction.type == "open_call"%>
+          <%= render partial: 'admin/auctions/inquiries', locals: { auction_bids: @view_model } %>
+    <% else %>
+          <%= render partial: 'admin/auctions/bids', locals: { auction_bids: @view_model } %>
+      <% end %>
     </div>
 
     <div class="usa-width-one-third">

@@ -6,6 +6,10 @@ class AuctionListItem
     @current_user = current_user
   end
 
+  def type
+    auction.type
+  end
+
   def title
     auction.title
   end

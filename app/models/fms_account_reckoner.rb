@@ -4,7 +4,9 @@ class FmsAccountReckoner < Struct.new(:user)
   def set_default_fms_status
     if user.fms_number.blank?
       user.fms_status = :fms_blank
+      user.is_mwbe = false
     elsif should_clear_status?
+      user.is_mwbe = false
       user.fms_status = :fms_pending
     end
   end
@@ -92,6 +94,8 @@ class FmsAccountReckoner < Struct.new(:user)
 
     if spending_mwbe_category != 'Non-M/WBE' || contracts.mwbe_category != 'Non-M/WBE'
       checkbook_result[:mwbe] = true
+    else
+      checkbook_result[:mwbe] = false
     end
 
     @vendor_summary ||= checkbook_result

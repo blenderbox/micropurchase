@@ -1,6 +1,6 @@
 class Eligibilities::InFms
   def eligible?(user)
-    user.fms_accepted? && not_admin?(user)
+    (user.fms_accepted? || user.fms_status == 'fms_pending') && not_admin?(user)
   end
 
   def label

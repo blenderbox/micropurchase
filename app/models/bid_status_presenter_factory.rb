@@ -66,6 +66,8 @@ class BidStatusPresenterFactory
       user_can_bid_message
     elsif auction.type == 'reverse'
       BidStatusPresenter::Available::Vendor::WinningBidder
+    elsif auction.type == 'open_call'
+      BidStatusPresenter::Available::Vendor::OpenCallAuctionBidder
     else # sealed bid, user is bidder
       BidStatusPresenter::Available::Vendor::SealedAuctionBidder
     end
@@ -80,8 +82,8 @@ class BidStatusPresenterFactory
   end
 
   def ineligible_presenter
-    if user.sam_status != 'sam_accepted'
-      BidStatusPresenter::Available::Vendor::NotSamVerified
+    if user.fms_status != 'fms_accepted'
+      BidStatusPresenter::Available::Vendor::NotFmsVerified
     else
       BidStatusPresenter::Available::Vendor::NotSmallBusiness
     end

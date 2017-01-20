@@ -18,6 +18,10 @@ class Admin::BidListItem
     bid.bidder.duns_number
   end
 
+  def veiled_fms_number
+    bid.bidder.fms_number
+  end
+
   def amount_to_currency_with_asterisk
     if bid == bid.auction.lowest_bid
       "#{amount_to_currency} *"

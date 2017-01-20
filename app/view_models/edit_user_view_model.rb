@@ -15,6 +15,10 @@ class EditUserViewModel
     sam_status_presenter.status_text
   end
 
+  def fms_status
+    return fms_status_class
+  end
+
   def fms_status_icon_class
     "#{fms_status_class}-verification-status-icon"
   end
@@ -25,6 +29,10 @@ class EditUserViewModel
 
   def fms_status_text
     fms_status_presenter.status_text
+  end
+
+  def is_mwbe
+    return @user.is_mwbe
   end
 
   def record

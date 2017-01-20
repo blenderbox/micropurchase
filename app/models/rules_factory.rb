@@ -9,6 +9,8 @@ class RulesFactory
       Rules::SealedBidAuction.new(auction, eligibility)
     elsif type == 'reverse'
       Rules::ReverseAuction.new(auction, eligibility)
+    elsif type == 'open_call'
+      Rules::OpenCallAuction.new(auction, eligibility)
     end
   end
 

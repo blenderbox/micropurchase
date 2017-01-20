@@ -14,6 +14,14 @@ class BidListItem
     end
   end
 
+  def veiled_fms_number
+    if auction_available? && bidder_not_user?
+      '[Withheld]'
+    else
+      bid.bidder.fms_number
+    end
+  end
+
   def veiled_duns_number
     if auction_available? && bidder_not_user?
       '[Withheld]'

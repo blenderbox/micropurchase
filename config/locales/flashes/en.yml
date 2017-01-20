@@ -1,5 +1,5 @@
 en:
   flashes:
     masquerades_controller:
-      new: "Now masquerading as %{user_email}"
-      destroy: "Stopped masquerading"
+      new: "Now viewing as %{user_email}"
+      destroy: "Stopped viewing as other user"

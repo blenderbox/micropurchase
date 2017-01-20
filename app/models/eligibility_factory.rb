@@ -9,7 +9,7 @@ class EligibilityFactory
     if start_price_threshold.small_business?
       Eligibilities::SmallBusiness.new
     else
-      Eligibilities::InSam.new
+      Eligibilities::InFms.new
     end
   end
 end

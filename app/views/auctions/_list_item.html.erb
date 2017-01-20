@@ -11,10 +11,12 @@
           <%= auction.relative_time %>
         </div>
 
+        <%if auction.type != 'open_call' %>
         <div class="winning-bid-detail">
           <%= render partial: auction.winning_bid_partial,
             locals: { auction: auction } %>
         </div>
+        <% end %>
       </div>
       <p>
         <%= auction.html_summary %>

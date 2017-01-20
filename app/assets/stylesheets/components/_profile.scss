@@ -16,6 +16,11 @@
     max-width: none;
   }
 
+  .verification {
+    margin-top: 10px;
+    line-height: 0px;
+  }
+
   .verification-status-text {
     display: inline-block;
     vertical-align: middle;
@@ -29,7 +34,9 @@
   }
 
   .error-verification-status-text {
-    color: $color-secondary-darkest;
+    color: $color-green;
+    font-weight: 600;
+    font-style: normal;
   }
 
   .pending-verification-status-text {
@@ -56,7 +63,7 @@
   }
 
   .error-verification-status-icon {
-    background: image-url('notification.png') left center no-repeat;
+    background: image-url('checkmark.png') left center no-repeat;
   }
 
   .pending-verification-status-icon,
@@ -64,4 +71,34 @@
   .verified-verification-status-icon {
     background-size: 16px;
   }
+
+  .box-border-sm {
+    box-sizing: border-box;
+    border: 0.75rem solid transparent;
+  }
+  .size-10 {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+  .font-blue {
+    color: #006699;
+  }
+
+  .inline {
+    display: inline-block;
+  }
+  .radius {
+    border-radius: 7px;
+  }
+  .pointer {
+    cursor: pointer;
+  }
+  .border-blue {
+    border: 2px solid #006699;
+    box-sizing: border-box;
+  }
+  .b-spacer-sm {
+    margin-bottom: 0.75rem;
+  }
+
 }

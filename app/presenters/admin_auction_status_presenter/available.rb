@@ -1,18 +1,35 @@
 class AdminAuctionStatusPresenter::Available < AdminAuctionStatusPresenter::Base
   def header
-    I18n.t('statuses.bid_status_presenter.available.admin.header')
+    if auction.type == 'open_call'
+      I18n.t('statuses.bid_status_presenter.available.admin.open_call_header')
+    else
+      I18n.t('statuses.bid_status_presenter.available.admin.header')
+    end
   end
 
   def body
     if total_bids.positive?
-      I18n.t(
-        'statuses.bid_status_presenter.available.admin.has_bids',
-        end_date: end_date,
-        winner_url: winner_url,
-        total_bids: total_bids
-      )
+      if auction.type == 'open_call'
+        I18n.t(
+            'statuses.bid_status_presenter.available.admin.open_call_has_inquiries',
+            end_date: end_date,
+            winner_url: winner_url,
+            total_bids: total_bids
+        )
+      else
+        I18n.t(
+            'statuses.bid_status_presenter.available.admin.has_bids',
+            end_date: end_date,
+            winner_url: winner_url,
+            total_bids: total_bids
+        )
+      end
     else
-      I18n.t('statuses.bid_status_presenter.available.admin.body', end_date: end_date)
+      if auction.type == 'open_call'
+        I18n.t('statuses.bid_status_presenter.available.admin.open_call_body', end_date: end_date)
+      else
+        I18n.t('statuses.bid_status_presenter.available.admin.body', end_date: end_date)
+      end
     end
   end
 

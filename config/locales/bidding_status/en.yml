@@ -23,6 +23,7 @@ en:
       label: Expiring
     over:
       bid_label: "Winning bid (%{winner_name}): %{amount}"
+      open_call_bid_label: "There were %{total_inquiries} total inquiries"
       deadline_label: Auction ended at
       label: Closed
       start_label: Auction started at

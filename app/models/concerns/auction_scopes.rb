@@ -14,7 +14,7 @@ module AuctionScopes
       where(delivery_status: [delivery_statuses['accepted'],
                               delivery_statuses['accepted_pending_payment_url']])
     }
-    scope :default_purchase_card, -> { where(purchase_card: 0) }
+    scope :default_purchase_card, -> { where(purchase_card: 1) }
     scope :delivery_url, -> { where.not(delivery_url: [nil, '']) }
     scope :ended_at_in_future, -> { where('ended_at > ?', Time.current) }
     scope :ended, -> { where('ended_at < ?', Time.current) }

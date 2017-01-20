@@ -8,7 +8,7 @@ class FmsStatusPresenter::Rejected < FmsStatusPresenter::Base
   end
 
   def status_text
-    'Invalid'
+    'Valid (inactive) '
   end
 
   def admin_status_text
