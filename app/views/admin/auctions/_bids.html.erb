@@ -12,7 +12,7 @@
       <tbody>
         <% auction_bids.veiled_bids.each do |bid| %>
           <tr>
-            <td><%= link_to bid.veiled_name, admin_user_path(bid.bidder_id) %></td>
+            <td><%= link_to bid.veiled_name_mwbe_bolded, admin_user_path(bid.bidder_id) %></td>
             <td><%= bid.veiled_fms_number %></td>
             <td><%= bid.amount_to_currency_with_asterisk %></td>
             <td><%= bid.created_at %></td>
@@ -20,8 +20,6 @@
         <% end %>
       </tbody>
     </table>
-    <p>
-      &#42; - winning bid
-    </p>
+
   </div>
 </div>
