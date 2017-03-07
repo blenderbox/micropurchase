@@ -16,4 +16,4 @@ en:
       download_csv: 'Download CSV'
       masquerade: 'View As'
     header:
-      stop_masquerading: 'Stop masquerading'
+      stop_masquerading: 'Stop viewing'
