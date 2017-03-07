@@ -16,9 +16,17 @@ class BidListItem
 
   def veiled_name_mwbe_bolded
     if auction_available? && bidder_not_user?
-      '<b>[Name withheld until the auction ends]</b>'
+      if bid.bidder.is_mwbe
+        '[Name withheld until the auction ends]*'
+      else
+        '[Name withheld until the auction ends]*'
+      end
     else
-      '<b>' + bid.bidder.name + '</b>'
+      if bid.bidder.is_mwbe
+        bid.bidder.name + '*'
+      else
+        bid.bidder.name
+      end
     end
   end
 
