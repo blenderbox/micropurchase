@@ -7,7 +7,6 @@
         <tr>
           <th scope="col">Bidder</th>
           <th scope="col">FMS</th>
-          <th scope="col">Amount</th>
           <th scope="col">Date (EST)</th>
         </tr>
       </thead>
@@ -16,7 +15,6 @@
           <tr>
             <td><%= bid.veiled_name %></td>
             <td><%= bid.veiled_fms_number %></td>
-            <td><%= bid.amount_to_currency_with_asterisk %></td>
             <td><%= bid.created_at %></td>
           </tr>
         <% end %>
