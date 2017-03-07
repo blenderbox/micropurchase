@@ -14,6 +14,10 @@ class Admin::BidListItem
     bid.bidder.name
   end
 
+ def veiled_name_mwbe_bolded
+    '<b>' + bid.bidder.name + '</b>'
+  end
+
   def veiled_duns_number
     bid.bidder.duns_number
   end
