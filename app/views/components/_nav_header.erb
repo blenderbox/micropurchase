@@ -20,13 +20,6 @@
                     page_path('policies'),
                     class: 'usa-footer-primary-link' %></li>
         <li class="nav-link">
-        <%= link_to 'Docs',
-                    page_path('docs'),
-                    class: 'usa-footer-primary-link' %></li>
-        <li class="nav-link">
-        <%= link_to 'Insights',
-                    insights_path,
-                    class: 'usa-footer-primary-link' %></li>
         <%= render partial: current_user.decorate.nav_drawer_partial %>
       </ul>
     </nav>

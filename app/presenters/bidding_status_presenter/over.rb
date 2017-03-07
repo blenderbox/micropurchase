@@ -26,9 +26,10 @@ class BiddingStatusPresenter::Over < BiddingStatusPresenter::Base
       I18n.t('bidding_status.over.open_call_bid_label',
              total_inquiries: auction.bids.count)
       else
-        I18n.t('bidding_status.over.bid_label',
-               winner_name: winner_name,
-               amount: winning_bid_amount_as_currency)
+        ""
+        #I18n.t('bidding_status.over.bid_label',
+        #       winner_name: winner_name,
+        #       amount: winning_bid_amount_as_currency)
       end
     else
       ''
