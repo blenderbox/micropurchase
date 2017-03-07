@@ -63,9 +63,7 @@ en:
         bidder:
           header: 'Closed'
           body: >
-            Bidding for this auction closed on %{end_date}. Your bid
-            (%{bid_amount}) was not the lowest bid. Better luck next
-            time!
+            Bidding for this auction closed on %{end_date}.
         not_bidder:
           header: 'Bidding closed'
           body: "Bidding for this auction closed on %{end_date}."
