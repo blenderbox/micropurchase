@@ -54,7 +54,7 @@
               locals: { label: label, data: data } %>
           <% end %>
 
-          <h6>Auction type:</h6>
+          <h6>Type:</h6>
           <p class="auction-label-info">
           <%= @view_model.rules_label %>
           (<%= link_to 'rules', polymorphic_path(@view_model.rules_route) %>)

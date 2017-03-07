@@ -16,6 +16,6 @@ class FmsStatusPresenter::Pending < FmsStatusPresenter::Base
   end
 
   def message
-    "You may continue to bid while your FMS number is being verified. (It usually takes less than one hour)."
+    "You may continue to bid while your FMS number is being verified. (It usually takes less than one hour). <a href=\"/\">Click here to view the open opportunties</a>"
   end
 end
