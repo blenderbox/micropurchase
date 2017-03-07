@@ -29,6 +29,7 @@ en:
         vendor:
           eligible:
             body: "The maximum you can bid is %{max_allowed_bid_as_currency}."
+            open_call_body: "If you're interested in learning more about this open call register your interest by clicking the button below..."
           not_verified:
             header: Please update your profile
             body: >

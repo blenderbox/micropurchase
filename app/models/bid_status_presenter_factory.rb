@@ -74,7 +74,9 @@ class BidStatusPresenterFactory
   end
 
   def user_can_bid_message
-    if user_bids.any?
+    if auction.type == 'open_call'
+      BidStatusPresenter::Available::Vendor::OpenCallAuctionBidder
+    elsif user_bids.any?
       BidStatusPresenter::Available::Vendor::ReverseAuctionOutbid
     else
       BidStatusPresenter::Available::Vendor::Eligible

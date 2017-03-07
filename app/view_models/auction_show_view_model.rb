@@ -35,9 +35,9 @@ class AuctionShowViewModel
     {
       bidding_status_presenter.start_label => formatted_date(auction.started_at),
       bidding_status_presenter.deadline_label => formatted_ended_at,
-      'Delivery deadline' => formatted_date(auction.delivery_due_at),
+      'Planned Launch Date' => formatted_date(auction.delivery_due_at),
       'Eligible vendors' => eligibility_label,
-      'Customer' => customer.agency_name
+      'Agency' => customer.agency_name
     }.compact
   end
 
