@@ -9,7 +9,7 @@ en:
       publish: 'Publish'
       archive: 'Archive'
     customers:
-      add: 'Add customer'
+      add: 'Add agency'
     skills:
       add: 'Add skill'
     users:
