@@ -37,7 +37,7 @@ class Admin::AuctionShowViewModel < Admin::BaseViewModel
       'Start date and time' => formatted_date(auction.started_at),
       'End date and time' => formatted_date(auction.ended_at),
       'Delivery deadline date and time' => formatted_date(auction.delivery_due_at),
-      'Auction type' => capitalized_type,
+      'Type' => capitalized_type,
       'Eligible vendors' => eligibility_label,
       'Starting price' => Currency.new(auction.start_price).to_s,
       'GitHub repo URL' => auction.github_repo,
