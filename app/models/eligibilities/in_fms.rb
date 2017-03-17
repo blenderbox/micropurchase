@@ -4,7 +4,7 @@ class Eligibilities::InFms
   end
 
   def label
-    'FMS Accepted only'
+    'FMS Vendors'
   end
 
   private

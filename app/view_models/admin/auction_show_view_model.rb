@@ -44,9 +44,9 @@ class Admin::AuctionShowViewModel < Admin::BaseViewModel
       'GitHub issue URL' => auction.issue_url,
       'Accepted at' => formatted_date(auction.accepted_at),
       'Delivery URL' => auction.delivery_url,
-      'Customer' => customer.agency_name,
+      'Agency' => customer.agency_name,
       'Billable to' => auction.billable_to,
-      'Purchase card' => auction.purchase_card,
+      'Payment Method' => auction.purchase_card,
       'Paid at' => formatted_date(auction.paid_at)
     }.merge(c2_fields)
   end

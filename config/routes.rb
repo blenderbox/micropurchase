@@ -65,18 +65,18 @@ Rails.application.routes.draw do
   resources :insights, only: [:index]
 
   # Map current API requests to new controller for now
-  namespace :api, defaults: { format: 'json' } do
-    namespace :v0 do
-      resources :auctions, only: [:index, :show] do
-        resources :bids, only: [:create]
-      end
+  #namespace :api, defaults: { format: 'json' } do
+  #  namespace :v0 do
+  #    resources :auctions, only: [:index, :show] do
+  #      resources :bids, only: [:create]
+  #    end
 
-      namespace :admin do
-        resources :auctions, only: [:index, :show]
-        resources :users, only: [:index]
-      end
+  #    namespace :admin do
+  #      resources :auctions, only: [:index, :show]
+  #      resources :users, only: [:index]
+  #    end
 
-      get 'business_day', to: 'business_days#show'
-    end
-  end
+  #    get 'business_day', to: 'business_days#show'
+  #  end
+  #end
 end

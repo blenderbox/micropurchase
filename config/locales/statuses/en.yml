@@ -110,10 +110,14 @@ en:
               request</a> with any questions, comments, or partial solutions. When you've
               completed your work, click "I'm done," below.
             action: "I'm done"
+          open_ended:
+            header: 'Open Complete'
+            body: >
+              The Open Call has completed. Thank you for your interest in participating in this project. The agency will reach out for more information.
           work_not_started:
             form_label: 'Pull request URL'
             form_submit: 'Start work'
-            header: 'Ready for work'
+            header: 'Ready for Work'
             body: >
               You won this auction on %{ended_at} and must deliver by
               %{delivery_deadline}. Please use GitHub to create a pull request and reference

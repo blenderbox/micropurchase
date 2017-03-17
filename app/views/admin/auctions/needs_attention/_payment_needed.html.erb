@@ -3,7 +3,7 @@
     <tr>
       <th scope="col"><%= t('needs_attention.index.columns.title') %></th>
       <th scope="col"><%= t('needs_attention.index.columns.accept_date') %></th>
-      <th scope="col"><%= t('needs_attention.index.columns.winner') %></th>
+      <!--<th scope="col"><%= t('needs_attention.index.columns.winner') %></th>-->
       <th scope="col"><%= t('needs_attention.index.columns.payment_status') %></th>
       <th scope="col"></th>
     </tr>
@@ -13,7 +13,7 @@
     <tr>
       <td><%= link_to(auction.title, admin_auction_path(auction.id)) %></td>
       <td><%= auction.accepted_at %></td>
-      <td><%= auction.winning_bidder.email %></td>
+      <!--<td><%= auction.winning_bidder.email %></td>-->
       <td><%= auction.payment_status %></td>
       <td><%= link_to('edit', edit_admin_auction_path(auction.id)) %></td>
     </tr>

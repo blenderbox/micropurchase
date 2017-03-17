@@ -2,7 +2,7 @@
   <thead>
     <tr>
       <th scope="col"><%= t('closed_auctions.index.columns.title') %></th>
-      <th scope="col"><%= t('closed_auctions.index.columns.winner') %></th>
+      <!--<th scope="col"><%= t('closed_auctions.index.columns.winner') %></th>-->
       <th scope="col"><%= t('closed_auctions.index.columns.delivery_url') %></th>
       <th scope="col"><%= t('closed_auctions.index.columns.rejected_at') %></th>
       <th scope="col"><%= t('closed_auctions.index.columns.actions') %></th>
@@ -12,7 +12,7 @@
     <% @view_model.rejected.each do |auction| %>
       <tr>
         <td><%= link_to(auction.title, admin_auction_path(auction.id)) %></td>
-        <td><%= auction.winning_vendor_github_login %></td>
+        <!--<td><%= auction.winning_vendor_github_login %></td>-->
         <td><%= auction.delivery_url %></td>
         <td><%= auction.rejected_at %></td>
         <td><%= link_to 'edit', edit_admin_auction_path(auction.id) %></td>
