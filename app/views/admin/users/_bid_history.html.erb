@@ -3,12 +3,10 @@
 <table class="striped-table" id="bid-history">
   <thead>
     <tr>
-      <th scope="col">Auction</th>
+      <th scope="col">Opportunity</th>
       <th scope="col">Status</th>
       <th scope="col">Skills</th>
       <th scope="col">User Bids</th>
-      <th scope="col">User Won?</th>
-      <th scope="col">Accepted?</th>
     </tr>
   </thead>
   <tbody>
@@ -18,8 +16,6 @@
         <td><%= auction.bidding_status %></td>
         <td><%= auction.skills %></td>
         <td><%= auction.user_bid_count %></td>
-        <td><%= auction.user_won_label %></td>
-        <td><%= auction.accepted_label %></td>
     <% end %>
   </tbody>
 </table>

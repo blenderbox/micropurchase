@@ -9,11 +9,12 @@ class Admin::UserShowViewModel < Admin::BaseViewModel
     [
       { label: 'Email', data: user.email },
       { label: 'Payment URL', data: user.payment_url },
-      { label: 'DUNS number', data: user.duns_number },
+      { label: 'FMS number', data: user.fms_number },
       { label: 'GitHub username', data: user.github_login },
       { label: 'GitHub ID', data: user.github_id },
-      { label: 'SAM', data: sam_status },
-      { label: 'Small business', data: small_business },
+      { label: 'FMS Status', data: user.fms_status },
+      { label: 'M/WBE', data: user.is_mwbe },
+      #{ label: 'Small business', data: small_business },
       { label: 'Contracting officer', data: contracting_officer }
     ]
   end
