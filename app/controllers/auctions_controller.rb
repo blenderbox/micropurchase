@@ -16,6 +16,7 @@ class AuctionsController < ApplicationController
       current_user: current_user,
       bid_error: flash[:bid_error]
     )
+
     @view_model.fms_status_message_for(flash)
   end
 

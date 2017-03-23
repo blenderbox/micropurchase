@@ -15,7 +15,7 @@ class BidStatusPresenter::Available::Vendor::OpenCallAuctionBidder < BidStatusPr
     'usa-alert-success'
   end
 
-  private
+  #private
 
   def bid_amount
     Currency.new(bid.amount)

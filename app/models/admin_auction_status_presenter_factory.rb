@@ -77,7 +77,11 @@ class AdminAuctionStatusPresenterFactory
     elsif auction.accepted? && auction.paid_at.present?
       AdminAuctionStatusPresenter::OtherPcard::Paid
     else # auction.rejected?
-      AdminAuctionStatusPresenter::Rejected
+      if auction.type == 'open_call'
+        AdminAuctionStatusPresenter::OpenCallCompleted
+      else
+        AdminAuctionStatusPresenter::Rejected
+      end
     end
   end
 

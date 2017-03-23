@@ -48,6 +48,7 @@ class UpdateAuction
   end
 
   def perform_accepted_auction_tasks
+
     if auction.accepted? && auction.accepted_at.nil? && auction.bids.any?
       AcceptAuction.new(
         auction: auction,
