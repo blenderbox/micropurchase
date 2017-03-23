@@ -24,7 +24,7 @@ en:
     over:
       bid_label: "Winning bid (%{winner_name}): %{amount}"
       open_call_bid_label: "There were %{total_inquiries} total inquiries"
-      deadline_label: Auction ended at
+      deadline_label: End Date and Time
       label: Closed
-      start_label: Auction started at
+      start_label: Start Date and Time
       relative_time: "Ended on %{time}"
