@@ -4,7 +4,7 @@ class AdminAuctionStatusPresenter::OpenCallCompleted < AdminAuctionStatusPresent
   end
 
   def body
-    'Open Call Completed'
+    'Please view the Inquiries tab to review the vendors who registered an interest on this opportunities.'
   end
 
   private

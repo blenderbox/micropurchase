@@ -58,15 +58,15 @@ en:
       future:
         vendor:
           header: 'Coming soon'
-          body: 'This auction is not currently accepting bids. It will open on %{start_date}.'
+          body: 'This opportunity is not currently accepting bids or inquiries. It will open on %{start_date}.'
       over:
         bidder:
           header: 'Closed'
           body: >
-            Bidding for this auction closed on %{end_date}.
+            Inquiries for this project closed on %{end_date}.
         not_bidder:
-          header: 'Bidding closed'
-          body: "Bidding for this auction closed on %{end_date}."
+          header: 'Closed'
+          body: "Inquiries for this opportunity closed on %{end_date}."
         winner:
           accepted_pending_payment_url:
             header: "Payment URL needed"
