@@ -43,7 +43,7 @@ class Admin::AuctionShowViewModel < Admin::BaseViewModel
       'GitHub repo URL' => auction.github_repo,
       'GitHub issue URL' => auction.issue_url,
       'Accepted at' => formatted_date(auction.accepted_at),
-      'Delivery URL' => auction.delivery_url,
+      #'Delivery URL' => auction.delivery_url,
       'Agency' => customer.agency_name,
       'Billable to' => auction.billable_to,
       'Payment Method' => auction.purchase_card,
