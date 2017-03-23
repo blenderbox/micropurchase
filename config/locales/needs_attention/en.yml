@@ -5,17 +5,17 @@ en:
         delivery_needed: Delivery needed
         delivery_past_due: Delivery past due
         drafts: Drafts
-        open: Open auctions
+        open: Open Opportunities
         upcoming: Coming soon
         evaluation_needed: Evaluation needed
         payment_needed: Payment needed
       null_text:
         upcoming: There are no auctions that are coming soon
-        delivery_needed: There are no auctions needing delivery
-        drafts: There are no draft auctions
-        open: There are no open auctions
-        evaluation_needed: There are no auctions needing evaluation
-        payment_needed: There are no auctions needing payment
+        delivery_needed: There are no opportunities needing delivery
+        drafts: There are no draft opportunities
+        open: There are no open opportunities
+        evaluation_needed: There are no opportunities needing evaluation
+        payment_needed: There are no opportunities needing payment
       columns:
         title: Title
         start_date: Starting Date
