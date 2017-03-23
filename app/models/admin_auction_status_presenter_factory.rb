@@ -79,6 +79,10 @@ class AdminAuctionStatusPresenterFactory
     else # auction.rejected?
       if auction.type == 'open_call'
         AdminAuctionStatusPresenter::OpenCallCompleted
+      elsif auction.type == 'sealed_bid'
+        AdminAuctionStatusPresenter::SealedBidCompleted
+      elsif auction.type == 'reverse'
+        AdminAuctionStatusPresenter::ReverseCompleted
       else
         AdminAuctionStatusPresenter::Rejected
       end
