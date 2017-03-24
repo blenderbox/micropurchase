@@ -3,7 +3,7 @@ en:
     index:
       headers:
         accepted: Successfully Delivered
-        rejected: Rejected Auctions
+        rejected: Rejected
         archived: Archived
         delivery_missed: Not Delivered
       null_text:
