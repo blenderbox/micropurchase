@@ -12,8 +12,7 @@ en:
           header: Accepting bids
           body: This auction is accepting bids until %{end_date}.
           has_bids: >
-            There are %{total_bids} bids on this auction, and
-            %{winner_url} is currently winning. This auction is
+            There are %{total_bids} bids on this auction. This auction is
             accepting bids until %{end_date}.
           open_call_header: Accepting Inquiries
           open_call_body: This Open Call is accepting inquiries until %{end_date}.
