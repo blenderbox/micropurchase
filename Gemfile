@@ -8,7 +8,7 @@ gem 'rails', '4.2.6'
 gem 'pg'
 gem 'active_model_serializers', '~> 0.9.5'
 gem 'business_time'
-gem 'c2', github: '18f/c2-api-client-ruby'
+gem 'c2', git: 'https://github.com/18f/c2-api-client-ruby.git'
 gem 'chronic'
 gem 'clockwork'
 gem 'daemons'
@@ -37,7 +37,7 @@ gem 'timecop'
 gem 'uglifier'
 gem 'validate_url'
 gem 'has_secure_token' # this can be removed in Rails 5
-gem 'uswds-rails', github: '18F/uswds-rails-gem'
+gem 'uswds-rails', git: 'https://github.com/18F/uswds-rails-gem.git'
 gem 'rest-client'
 
 group :test do
