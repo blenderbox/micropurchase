@@ -4,7 +4,7 @@ module UserProvidedService
   end
 
   def use_env_var?
-    Rails.env.development? || Rails.env.test?
+    Rails.env.development? || Rails.env.test? || Rails.env.staging?
   end
 
   def user_provided_service(name)

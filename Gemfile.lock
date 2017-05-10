@@ -1,12 +1,12 @@
 GIT
-  remote: git://github.com/18F/uswds-rails-gem.git
+  remote: https://github.com/18F/uswds-rails-gem.git
   revision: aa12ddd314209ef9e75bb2f2bfcf1454336df049
   specs:
     uswds-rails (1.0.0)
       sass
 
 GIT
-  remote: git://github.com/18f/c2-api-client-ruby.git
+  remote: https://github.com/18f/c2-api-client-ruby.git
   revision: 1404abe563c1a1048c91a319a488be5d6a172936
   specs:
     c2 (1.0.0)
@@ -135,7 +135,7 @@ GEM
     email_validator (1.6.0)
       activemodel
     erubis (2.7.0)
-    excon (0.52.0)
+    excon (0.55.0)
     execjs (2.7.0)
     factory_girl (4.7.0)
       activesupport (>= 3.0.0)
@@ -146,8 +146,8 @@ GEM
       i18n (~> 0.5)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
-    faraday_middleware (0.10.0)
-      faraday (>= 0.7.4, < 0.10)
+    faraday_middleware (0.11.0.1)
+      faraday (>= 0.7.4, < 1.0)
     foreman (0.82.0)
       thor (~> 0.19.1)
     gherkin (4.0.0)
