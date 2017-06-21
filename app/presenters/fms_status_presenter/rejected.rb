@@ -16,9 +16,7 @@ class FmsStatusPresenter::Rejected < FmsStatusPresenter::Base
   end
 
   def message
-    "Your FNS Vendor Number was not found in the City's Payee Information Portal (PIP). Please enter a valid FMS Vendor Number
-    to complete your profile. Check the city's Payee Information Portal (PIP) at 
-    https://a127-pip.nyc.gov/webapp/PRDPCW/SelfService to make sure
-    your FMS number is correct. If you need any help contact us at http://www1.nyc.gov/site/forward/contact/contact.page"
+    "Your FNS Vendor Number is valid but does not seem to be active. Please visit the city's Payee Information Portal (PIP) at 
+    https://a127-pip.nyc.gov/webapp/PRDPCW/SelfService to reactivate your status. If you need any help contact us at http://www1.nyc.gov/site/forward/contact/contact.page"
   end
 end
