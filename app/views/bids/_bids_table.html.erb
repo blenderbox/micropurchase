@@ -4,8 +4,6 @@
       <th scope="col"><%= t 'labels.vendor.account.bids_placed.columns.auction' %></th>
       <th scope="col"><%= t 'labels.vendor.account.bids_placed.columns.status' %></th>
       <th scope="col"><%= t 'labels.vendor.account.bids_placed.columns.number_bids' %></th>
-      <th scope="col"><%= t 'labels.vendor.account.bids_placed.columns.lowest_bid' %></th>
-      <th scope="col"><%= t 'labels.vendor.account.bids_placed.columns.won' %></th>
     </tr>
   </thead>
   <tbody>
@@ -14,8 +12,6 @@
       <td><%= link_to(auction.title, auction_path(auction.id)) %></td>
       <td><%= auction.bidding_status %></td>
       <td><%= auction.user_bid_count %></td>
-      <td><%= auction.user_lowest_bid %></td>
-      <td><%= auction.user_won_label %></td>
     </tr>
     <% end %>
   </tbody>
