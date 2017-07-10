@@ -4,7 +4,7 @@ class AdminAuctionStatusPresenter::SealedBidCompleted < AdminAuctionStatusPresen
   end
 
   def body
-    'Sealed Bid Completed'
+    'Please view the Bids tab to review the vendors who bid on this opportunity.'
   end
 
   private
